@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title> RecodePro Varejista</title><!--titulo -->
+        <!--usando css dentro  da  pagina html-->
+        <style>
+          
+            /*cabeçalho do site*/
+            .cabecalho{
+                background:red;
+                color: white;
+                width: 100%;
+                height: 100px;
+                font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+                text-align: center;
+                padding:1px;
+                margin-bottom: 50px;
+            }
+            /*rodape da pagina*/
+            .rodape{
+                height: 120px;
+                text-align: center;
+                background:red;
+                margin-top: 20px;
+                width: 100%;
+            }
+            .busca{
+                padding:10px;
+                margin: 20px;
+            }
+              /*logo*/
+            #logo{
+                text-align: center;
+                color:turquoise;
+                font-size: 30px;
+                font-family:sans-serif;
+                margin-left: 0px;
+
+            }
+            .tr_descricao{
+                font-family:serif;
+                color:indigo;
+                text-align: center;
+            }
+            /*trabalhando com os valores antigos do prodto*/
+            .tr_valor_antigo{
+                color: red;
+                margin: 10px;
+            }
+            .tdbtn{
+                text-align: center;
+            }
+            /*botoes de comprar produtos*/
+            #btn{
+               background: red;
+               color: white;
+               padding: 10px;
+               font-family:Impact, 'Arial Narrow Bold', sans-serif;   
+           }
+           /*semprodutos no estoque (esgotado) */
+           .esgotado{
+                opacity: 0.5;
+           }
+           /*fazendo menu com os th da tabela 01*/
+           .menutelefone{
+                background-color: red;
+                padding: 10px;
+                color: white;
+                border-radius: 2px;
+                font-style: italic;
+            }
+    
+        </style>
+    </head>
+    <body>
+        <!-- Iicio javaScript-->
+        <script>
+            document.getElementById("coordenadas").onmousemove = function(event) {
+                myFunction(event)
+            };
+            /*minha funcao das coordenadas X,Y das imagens */
+            function myFunction(e) {
+            var x = e.clientX;//variavel X pega valor X coordenada
+            var y = e.clientY;//variavel Y pega valor Y coordenada
+            var coor = "Coordinates: (" + x + "," + y + ")";
+            /*criaçao do demos sendo foi criado um para cada image ja que os ID sao apenas para cada elemento usar nas imagens com produtos esgotados*/
+            //Acessa e fazer a modificaçao por ID
+            document.getElementById("demo1").innerHTML = coor;/*Retorna a referência do elemento através do seu ID demo1.*/
+            document.getElementById("demo2").innerHTML = coor;/*Retorna a referência do elemento através do seu ID demo2.*/
+            document.getElementById("demo3").innerHTML = coor;/*Retorna a referência do elemento através do seu ID demo3.*/
+            document.getElementById("demo4").innerHTML = coor;/*Retorna a referência do elemento através do seu ID demo4.*/
+          }
+          //usando clicks nos Menu superior
+          //criar uma funcao click o um bloco de codigos para quuano for clicado mostra informaçoes de descontos telefones
+          function click_menu_telefone() {
+            alert("Todos os Telefones Estao na promoçao de 25% de descontos");
+          }
+          
+          //criar uma funcao click o um bloco de codigos para quuano for clicado mostra informaçoes de descontos eletrodomesticos
+          function click_menu_eletrodomesticos() {
+            alert("Todos os eletros Estao na promoçao de 35% de descontos");
+          }
+          
+          //criar uma funcao click o um bloco de codigos para quuano for clicado mostra informaçoes de descontos moveis
+          function click_menu_moveis() {
+            alert("Todos os moveis Estao na promoçao de 45% de descontos");
+          }
+          
+          //criar uma funcao click o um bloco de codigos para quuano for clicado mostra informaçoes de descontos tecnologia
+          function click_menu_tecnologia() {
+            alert("Todos as tecnologias Estao na promoçao de 55% de descontos");
+          } 
+          
+          //criar uma funcao click o um bloco de codigos para quuano for clicado mostra informaçoes de descontos tvs
+          function click_menu_tvs() {
+            alert("Todos as tvs Estao na promoçao de 65% de descontos");
+          }s
+        </script>
+        <!--fim javaScript-->
+
+        <h1 id="logo">Tenha R$100 de desconto em compras acima de R$300,00</h1>
+        <!--Reestruturar o projeto usando estilos, margens e alinhamentos em CSS. -->
+        <!--Inclusão de eventos (onmousemove, onclick) sobre imagens e itens de menu, inclusão de funções para manipulação e exibição de elementos e objetos. -->
+        <!--cabeçalho do site-->
+        
+        
+        <header class="cabecalho">
+            
+                <input type="text" id="txtBusca"class="busca" placeholder="Buscar..."/>
+                <button class="bt_pesquisa btn">pesquisa</button>
+              </div>
+
+              <h1>RecodePro </h1>
+        </header>
+        <!--Tabela 01  produtos diferentes-->
+        <!-- chama evento-->
+        <!--<div class="td_img_refrigerador" onmousemove="myFunction(event)" onmouseout="clearCoor()">   <p id="demo"> testando</p></div>-->
+        <table border="0" align="center" >
+            <tr class="menutelefone">
+                <!--click_menuTel para nosso click-->
+            <th onclick="click_menu_telefone()">Telefones </th>
+            <th onclick="click_menu_eletrodomesticos()">Eletrodomesticos</a></th>
+            <th onclick="click_menu_tvs()">Tvs</th>
+            <th onclick="click_menu_moveis()">Moveis</th>
+            <th onclick="click_menu_tecnologia()">Tecnologia</th>
+            </tr>
+            <!--Imagem dos produtos da loja-->
+            <!-- chama evento-->
+
+            <tr>
+                <!-- chama evento-->
+                <!--imagem com evento onmousemove-->
+                <td class="td_img_celular esgotado coordenadas" onmousemove="myFunction(event)" onmouseout="clearCoor()"><a href="#celulares"><img src="image/celular.png"  alt="celular01" title="Smart Fone" width="200"></a></td>  
+                <td class="td_img_refrigerador"><a href="#html"><img src="image/refrigerador.png" width="200"></a></td>
+                <td class="td_img_tvs"><a href="#tvs"><img src="image/tvs.jpg" width="200"></a></td>
+                <!--imagem com evento onmousemove-->
+                <td class="td_img_guardaropa esgotado" onmousemove="myFunction(event)" onmouseout="clearCoor()"><a href="#guardaroupas"><img src="image/guardaroupa.png" width="200"></a></td>
+                <td class="td_img_notebook"><a href="notebooks.html"><img src="image/notebook.png" width="200"></a></td>
+            </tr>
+        </div>
+            <!--Descriçao dos produtos da loja-->
+            <tr class="tr_descricao">
+                <td>celulares</td>
+                <td>Refrigerador Brastemp </td>
+                <td>Tv Smart</td>
+                <td>Guarda Roupa</td>
+                <td>Notebook</td>
+            </tr>
+             <!--valor antigo dos produtos queima total-->
+            <tr align="center" class="tr_valor_antigo">
+                <td><s>De:R$2.398,50</s></td>
+                <td><s>De:R$6.890,10</s></td>
+                <td><s>De:R$1.993,54</s></td>
+                <td><s>De:R$3.218,90</s></td>
+                <td><s>De:R$3.080,71</s></td>
+            </tr>
+            <!--Valor atualizado dos produtos-->
+            <tr align="center" class="tr_valor_atualizado">
+                <td style="color: darkblue;" id="demo1"><b>Por:R$1.998,20</b></td><!--muda com evento onmousemove-->
+                <td style="color: darkblue;"><b>Por:R$5.890,08</b></td>
+                <td style="color: darkblue;"><b>Por:R$2.080,31</b></td>
+                <td style="color: darkblue;" id="demo2"><b>Por:R$1.443,55</b></td><!--muda com evento onmousemove-->
+                <td style="color: darkblue;"><b>Por:R$2.218,20</b></td>
+            </tr>
+            <!--uso de botoes para compra os produtos-->
+            <tr>
+                <td class="tdbtn bt1 esgotado"><button id="btn">Esgotado</button></td>
+                <td class="tdbtn bt2"><button id="btn">Comprar</button></td>
+                <td class="tdbtn bt3"><button id="btn">Comprar</button></td>
+                <td class="tdbtn bt4 esgotado"><button id="btn">Esgotado</button></td>
+                <td class="tdbtn bt5"><button id="btn">Comprar</button></td>
+            </tr>
+            </table>
+            <!--Celulares-->
+    
+        <br><br>
+        <!--Tabela 02  produtos -->
+        <table border="0" align="center">
+            <caption style="font-size: 30px; color: cornflowerblue; font-weight: bolder;">Celuares</caption>
+            <!--Imagem dos produtos da loja-->
+            <tr>
+                <td class="td_img_xiaomi"><img src="image/cellarXiaomi.jpg"  alt="celular01" title="Smart Fone" width="200"></td>
+                <td class="td_img_iphone"><img src="image/iphone.jpg" width="200"></td>
+                <!--imagem com evento onmousemove-->
+                <td class="td_img_iphonexp esgotado" onmousemove="myFunction(event)" onmouseout="clearCoor()"><img src="image/iphoneXP.jpg" width="200"></td>
+                <td class="td_img_xiaomi"><img src="image/smartphoneXiaomi.jpg" width="200"></td>
+                <td class="td_img_cellar"><img src="image/celular.png" width="200"></td>
+            </tr>
+            <!--Descriçao dos produtos da loja-->
+            <tr class="tr_descricao">
+                <td>Xiaomi</td>
+                <td>iphone</td>
+                <td>iphoneXP</td>
+                <td>smartphone Xiaomi</td>
+                <td>smartphone</td>
+            </tr>
+            <!--valor antigo dos produtos queima total-->
+            <tr align="center" class="tr_valor_antigo">
+                <td><s>De:R$2.398,50</s></td>
+                <td><s>De:R$6.890,10</s></td>
+                <td><s>De:R$3.080,71</s></td>
+                <td><s>De:R$1.993,54</s></td>
+                <td><s>De:R$3.218,90</s></td>
+            </tr>
+            <!--produtos atualizados-->
+            <tr align="center" class="tr_valor_atualizado">
+                <td style="color: darkblue;"><b>Por:R$1.998,20</b></td>
+                <td style="color: darkblue;"><b>Por:R$5.890,08</b></td>
+                <td style="color: darkblue;" id="demo3"><b>Por:R$2.080,31</b></td><!--Muda com evento onmousemove-->
+                <td style="color: darkblue;"><b>Por:R$1.443,55</b></td>
+                <td style="color: darkblue;"><b>Por:R$2.218,20</b></td>
+            </tr>
+            <!--uuso de botoes para compra os produtos-->
+            <tr>
+                <td class="tdbtn bt6"><button id="btn">Comprar</button></td>
+                <td class="tdbtn bt7"><button id="btn">Comprar</button></td>
+                <td class="tdbtn bt8 esgotado"><button id="btn">Esgotado</button></td>
+                <td class="tdbtn bt9"><button id="btn">Comprar</button></td>
+                <td class="tdbtn bt10"><button id="btn">Comprar</button></td>
+            </tr>
+        </table>
+        <!--Livros-->
+        <br><br>
+        <!--Tabela 03  produtos-->
+        <table border="0" align="center">
+            <caption style="font-size: 30px; color: cornflowerblue;"><b>Livros<b></caption>
+                <!--Imagem dos produtos da loja-->
+            <tr>
+                <td class="td_img_fisica"><img src="image/livro_fisica.png"  alt="celular01" title="Smart Fone" width="200"></td>
+                <!--imagem com evento onmousemove-->
+                <td class="td_img_java esgotado coordenadas" onmousemove="myFunction(event)" onmouseout="clearCoor()"><img src="image/livro_java.png" width="200"></td>
+                <td class="td_img_matematica"><img src="image/livro_matematica.png" width="200"></td>
+                <td class="td_img_portugues"><img src="image/livro_portugues.png" width="200"></td>
+                <td class="td_img_turmamonica"><img src="image/livro_turmamonica.png" width="200"></td>
+            </tr>
+            <!--Descriçao dos produtos da loja-->
+            <tr class="tr_descricao">
+                <td>celulares</td>
+                <td>Refrigerador Brastemp </td>
+                <td>Tv Smart</td>
+                <td>Guarda Roupa</td>
+                <td>Notebook</td>
+            </tr>
+            <!--valor antigo dos produtos queima total-->
+            <tr align="center" class="tr_valor_antigo">
+                <td><s>De:R$45,50</s></td>
+                <td><s>De:R$68,10</s></td>
+                <td><s>De:R$31,71</s></td>
+                <td><s>De:R$76,54</s></td>
+                <td><s>De:R$30,79</s></td>
+            </tr>
+            <!--valor atualizado dos produtos-->
+            <tr align="center" class="tr_valor_atualizado">
+                <td style="color: darkblue;"><b>Por:R$30,20</b></td>
+                <td style="color: darkblue;" id="demo4"><b>Por:R$60,08</b></td><!--imagem com evento onmousemove-->
+                <td style="color: darkblue;"><b>Por:R$25,31</b></td>
+                <td style="color: darkblue;"><b>Por:R$65,55</b></td>
+                <td style="color: darkblue;"><b>Por:R$21,09</b></td>
+            </tr>
+            <!--uuso de botoes para compra os produtos-->
+            <tr>
+                <td class="tdbtn bt11"><button id="btn">Comprar</button></td>
+                <td class="tdbtn bt12 esgotado"><button id="btn">Esgotado</button></td>
+                <td class="tdbtn bt13"><button id="btn">Comprar</button></td>
+                <td class="tdbtn bt14"><button id="btn">Comprar</button></td>
+                <td class="tdbtn bt15"><button id;="btn">Comprar</button></td>
+            </tr>
+
+         </table>
+         <br>
+        <!--Formulario de contato-->
+         <form style="text-align: center;">
+            <label>Nome:</label>
+            <input type="text" id="idnome" >
+            <label>E-Mail</label>
+            <input type="email" id="idemail">
+            <button>Enviar</button>
+        </form>
+        
+        <footer class="rodape">
+            <img src="image/formas-pagamento.png">
+        </footer>
+    </body>
+</html>
