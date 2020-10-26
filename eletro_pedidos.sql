@@ -43,7 +43,10 @@ CREATE TABLE `pedidos` (
 
 LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,'jose jair','Rua A','99778-8987','Fogao',2000.00,2,4000.00),(2,'joao','Rua C','98878-6666','celular',1900.00,1,1900.00),(3,'maria','Rua AB','98654-7654','notebook',3800.00,1,3800.00),(4,'Pedro','Rua TA','95556-6655','livro',50.00,3,150.00);
+INSERT INTO `pedidos` VALUES (1,'jose jair','Rua A','99778-8987','Fogao',2000.00,2,4000.00),
+                             (2,'joao','Rua C','98878-6666','celular',1900.00,1,1900.00),
+                             (3,'maria','Rua AB','98654-7654','notebook',3800.00,1,3800.00),
+                             (4,'Pedro','Rua TA','95556-6655','livro',50.00,3,150.00);
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
