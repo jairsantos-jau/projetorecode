@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `eletro` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `eletro`;
 -- MySQL dump 10.13  Distrib 8.0.20, for Win64 (x86_64)
 --
 -- Host: localhost    Database: eletro
@@ -32,7 +34,7 @@ CREATE TABLE `pedidos` (
   `quantidade` int NOT NULL,
   `valor_total` decimal(8,2) NOT NULL,
   PRIMARY KEY (`idpedidos`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +43,7 @@ CREATE TABLE `pedidos` (
 
 LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,'jose jair','Rua A','99778-8987','Fogao',2000.00,2,4000.00);
+INSERT INTO `pedidos` VALUES (1,'jose jair','Rua A','99778-8987','Fogao',2000.00,2,4000.00),(2,'joao','Rua C','98878-6666','celular',1900.00,1,1900.00),(3,'maria','Rua AB','98654-7654','notebook',3800.00,1,3800.00),(4,'Pedro','Rua TA','95556-6655','livro',50.00,3,150.00);
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-23 19:49:14
+-- Dump completed on 2020-10-26  3:44:48
